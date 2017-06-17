@@ -63,7 +63,7 @@ Advantages of Runnable interface over Thread class
 
 State Transition Diagram of a Thread 
 ------------------------------------
-	Refer diagram Thread States.png
+
 
 Methods of Thread class
 -----------------------

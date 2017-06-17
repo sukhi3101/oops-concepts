@@ -1,0 +1,80 @@
+MULTI THREADING 3rd Assignment
+Multithreading
+--------------
+- A thread is a light weight process under execution with in a process
+- Multithreading is used to increase the performance of application
+
+eg:
+main()
+{
+   se = sumEven();
+   so = sumOdd();
+}
+sumEven()
+{
+   ...
+}
+sumOdd()
+{
+   ...
+}
+
+Creating a Thread
+-----------------
+- Create a class which extends Thread class
+    or
+- Create a class which implements Runnable interface
+
+Using Thread class
+------------------
+class MyThread extends Thread
+{
+    public void run()
+    {
+	//logic goes here
+    }
+}
+
+MyThread t = new MyThread();
+t.start();//creates a thread and invokes run()
+
+Using Runnable interface
+------------------------
+class MyThread implements Runnable
+{
+    public void run()
+    {
+	//logic goes here
+    }
+}
+
+Advantages of Runnable interface over Thread class
+--------------------------------------------------
+- If a class extends another class, to make this class as thread, the class should implement Runnable interface as Java does not support multiple inheritance
+	eg:
+		class A 
+		{}
+		class B extends A,Thread //Error - multiple inheritance
+		{}
+		class B extends A implements Runnable
+		{}
+
+- Ensures that run() is overridden
+
+State Transition Diagram of a Thread 
+------------------------------------
+	Refer diagram Thread States.png
+
+Methods of Thread class
+-----------------------
+- void start()
+- void run()
+- Thread currentThread()
+- void setName(String)
+- String getName()
+- void setPriority(int)
+- int getPriority()
+- void sleep(long)
+- void join()
+- void yield()
+- String toString()
